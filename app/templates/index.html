@@ -7,10 +7,10 @@
     {% if current_user.is_authenticated %}
         <p class="mb-4">You are logged in as {{ current_user.email }}</p>
         <div class="space-x-4">
-            <a href="{{ url_for('team.list_team_data') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m">
+            <a href="{{ url_for('scouting.list_scouting_data') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m">
                 Scout
             </a>
-            <a href="{{ url_for('team.team_search_page') }}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+            <a href="{{ url_for('scouting.search_page') }}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
                 Search 
             </a>
         </div>
