@@ -56,9 +56,11 @@ def create_app():
     # Import blueprints inside create_app to avoid circular imports
     from auth.routes import auth_bp
     from scout.routes import scouting_bp
+    from team.routes import team_routes
 
     app.register_blueprint(auth_bp, url_prefix="/auth")
     app.register_blueprint(scouting_bp, url_prefix="/")
+    app.register_blueprint(team_routes, url_prefix="/team")
 
     @app.route("/")
     def index():
